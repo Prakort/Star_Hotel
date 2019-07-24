@@ -1,5 +1,7 @@
 # Star_Hotel Hotel Webpage Model http://leanp.myweb.cs.uwindsor.ca/60334/final_project/html/index.html
 
+ Feel free to sign up and login as guest or staff.
+
  This website is dynamically responsive to all screens.
 
  1,This website allows guests to check in and select the room. After confirmation of the booking , guests can login and see the details of their account:
@@ -18,9 +20,9 @@
  
  -Update their  account info
  
- -See all bookings and the status of the booking (N/A, confirmed,cancelled)
+ -Check all bookings and the status of the booking (N/A, confirmed,cancelled)
  
- -See today check in booking 
+ -Check today check in booking 
  
  -Select one booking ID and add rooms to the booking ID depends on the number of the room
  
