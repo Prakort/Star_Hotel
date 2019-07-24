@@ -4,28 +4,28 @@
 
  1,This website allows guests to check in and select the room. After confirmation of the booking , guests can login and see the details of their account:
  
- -they can see their info
+ -They can see their info
  
- -update their info
+ -Update their info
  
- -check their booking
+ -Check their booking
  
- -cancel their booking only if it's 24 hours prior to the check in date and time
+ -Cancel their booking only if it's 24 hours prior to the check in date and time
  
  2, For staff , they can also login using login on the page:
  
- -they can see their account info
+ -They can see their account info
  
- -update their  account info
+ -Update their  account info
  
- -see all bookings and the status of the booking (N/A, confirmed,cancelled)
+ -See all bookings and the status of the booking (N/A, confirmed,cancelled)
  
- -see today check in booking 
+ -See today check in booking 
  
- -select one booking ID and add rooms to the booking ID depends on the number of the room
+ -Select one booking ID and add rooms to the booking ID depends on the number of the room
  
- -check out the rooms
+ -Check out the rooms
  
- -staff has permission to cancel the room by customer request only if it's 24 hours prior to the check in ( same with the guests' rule)
+ -Staff has permission to cancel the room by customer request only if it's 24 hours prior to the check in ( same with the guests' rule)
  
- -the last thing is the Data analysis: there are pie charts showing the data of the category room , booking.
+ -The last thing is the Data analysis: there are pie charts showing the data of the category room , booking.
