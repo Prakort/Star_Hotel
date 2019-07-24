@@ -1,4 +1,4 @@
-# Star_Hotel Hotel Webpage Model
+# Star_Hotel Hotel Webpage Model http://leanp.myweb.cs.uwindsor.ca/60334/final_project/html/index.html
 
  This website is dynamically responsive to all screens.
 
