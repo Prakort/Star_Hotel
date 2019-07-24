@@ -1,0 +1,397 @@
+
+body {
+  font-family: "Montserrat";
+  text-align: center;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat-Bold";
+}
+
+p {
+  color: #8f8f8f;
+}
+#search-btn{
+
+        color: white;
+         width: 100%;
+        height: 39px;
+        border: 0;
+        text-align: center;
+        background-color: #637496 ;
+
+
+}
+#search-btn:hover{
+    border-bottom: solid 4px #da8661;
+
+}
+/* Headings */
+
+.big-heading {
+  font-family: "Montserrat-Black";
+  font-size: 3.5rem;
+  line-height: 1.5;
+}
+
+.section-heading {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+/* Containers */
+
+.container-fluid{
+  padding: 7% 15%;
+}
+
+/* Sections */
+
+.colored-section {
+  background-color: #637496;
+  color: #fff;
+}
+
+.white-section {
+  background-color: #fff;
+}
+
+/* Navigation Bar */
+
+.navbar {
+  padding: 0 0 4.5rem;
+}
+
+.navbar-brand {
+  font-family: "Ubuntu";
+  font-size: 2.5rem;
+  font-weight: bold;
+}
+
+.nav-item {
+  padding: 0 18px;
+}
+
+.nav-link {
+  font-size: 1.2rem;
+  font-family: "Montserrat-Light";
+}
+
+/* Buttons */
+
+.download-button {
+  margin: 5% 3% 5% 0;
+}
+
+/* Title Section */
+
+#title {
+  background-color: #637496;
+  color: #fff;
+  text-align: left;
+}
+
+#title .container-fluid {
+  padding: 3% 5% 5%;;
+}
+
+/* Title Image */
+
+.title-image {
+  width: 60%;
+  transform: rotate(25deg);
+  position: absolute;
+  right: 30%;
+}
+
+/* Features Section */
+
+#features {
+  position: relative;
+  top:90px;
+}
+
+.feature-title {
+  font-size: 1.5rem;
+}
+
+.feature-box {
+  padding: 4.5%;
+}
+
+.icon {
+  color: #ef8172;
+  margin-bottom: 1rem;
+}
+
+.icon:hover {
+  color: #ff4c68;
+}
+#features .container-fluid{
+    width: 100%;
+    padding: 0;
+
+}
+#features .container{
+    background-color: transparent;
+    width: 100%;
+    margin-top: 0px;
+margin-bottom: -350px;
+
+
+}
+#midtext{
+
+}
+.box{
+    width: 100%;
+    height: 39px;
+    border: 0;
+    text-align: center;
+    background-color: transparent ;
+}
+.eachbox{
+    padding-right:0px;
+    padding-left: 0px;
+  text-align: center;
+    height: 40px;
+    background-color: white;
+    border: 1px solid ;
+    border-color: grey;
+    width: 100%;
+}
+#search_box_container{
+    padding-top: 90px;
+text-align: center;
+background-color: #2e3f61;
+width: 100%;
+height: 233px;
+position: absolute;
+top: 610px;
+padding-left: 10%;
+padding-right: 10%;
+}
+.eachbox:hover{
+    border-bottom: solid 4px #da8661;
+
+}
+.box:hover{
+    border-color: transparent;
+    border-style: hidden;
+
+}
+.sbox{
+     width: 100%;
+    height: 39px;
+    border: 0;
+    text-align: center;
+    background-color: #637496 ;
+}
+.sbox:hover{
+    border-bottom: solid 4px #da8661;
+
+}
+.room-pic{
+    width: 100%;
+
+}
+.room-div{
+
+}
+@media (max-width: 540px)
+{
+.middle-image1{
+
+margin-top:1px;
+}
+
+}
+@media only screen and (max-width: 992px){
+    #search_box_container{
+        height: 300px;
+    }
+}
+
+@@media (min-width: 1000px) {
+
+    #features .container{
+        margin-bottom: -450px;
+    }
+}
+@media(max-width: 900px){
+    #features{
+        top:50px;
+    }
+    #features .container-fluid{
+    top:300px;
+    padding: 0;
+
+
+    }
+    #features .container{
+        margin-bottom: -300px;
+    }
+}
+@media (max-width: 800px)
+{
+.middle-image1 {
+    margin-top: 40px;
+}
+    #features{
+        top:1px
+    }
+    #features .container{
+        margin-bottom: -300px;
+    }
+}
+@@media (min-width: 750) {
+    .home_title h1
+    {
+    	font-size: 72px;
+    	color: #FFFFFF;
+    }
+    .home_text
+    {
+
+    	font-size: 16px;
+    	color: #FFFFFF;
+
+    }
+
+}
+@media (max-width: 750px)
+{
+    #features{
+        top:10px
+    }
+    #features .container{
+        margin-bottom: -350px;
+    }
+    .home_title h1
+    {
+    	font-size: 40px;
+    	color: #FFFFFF;
+    }
+    .home_text
+    {
+
+    	font-size: 10px;
+    	color: #FFFFFF;
+
+    }
+    #search_box_container{
+        height: 380px;
+    }
+}
+.middle-image1{
+
+width: 100%;
+ height: 430px;
+}
+.middle-image{
+    width: 100%;
+    height: 400px
+}
+#features .row{
+    width: 100%;
+}
+.white-section .container-fluid .row .col{
+
+}
+/* Testimonial Section */
+
+#testimonials {
+  background-color: #ef8172;
+}
+
+.testimonial-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.testimonial-image {
+  width: 10%;
+  border-radius: 100%;
+  margin: 20px;
+}
+
+
+#press {
+  background-color: #ef8172;
+  padding-bottom: 3%;
+}
+
+.press-logo {
+  width: 15%;
+  margin: 20px 20px 50px;
+}
+
+/* Pricing Section */
+
+#pricing {
+  padding: 100px;
+  margin-top: 300px;
+}
+
+.price-text {
+  font-size: 3rem;
+  line-height: 1.5;
+}
+
+.pricing-column {
+  padding: 3% 2%;
+}
+
+/* CTA Section */
+
+
+/* Footer Section */
+
+
+.social-icon {
+  margin: 20px 10px;
+}
+
+@media (max-width: 1028px) {
+
+  #title {
+    text-align: center;
+  }
+
+  .title-image {
+    position: static;
+    transform: rotate(0);
+  }
+}
+/*********************************
+Home
+*********************************/
+
+.home
+{
+    background-color: grey;
+	width: 100%;
+	height: 892px;
+}
+._container
+{
+	position: absolute;
+	left: 0;
+	top: 34.23%;
+	width: 100%;
+}
+.home_title h1
+{
+	font-size: 72px;
+	color: #FFFFFF;
+}
+.home_text
+{
+	max-width: 910px;
+	margin-left: auto;
+	margin-right: auto;
+	font-size: 16px;
+	color: #FFFFFF;
+	line-height: 2.25;
+	margin-top: 12px;
+}

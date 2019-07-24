@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../css/signup.css">
+  <link rel="stylesheet" href="../css/styles.css">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+
+      <!--------------------------------------------  Avatar  ------------------------------------------->
+<h1 style="text-align: center">Star Hotel</h1>
+<h2 style="text-align: center">Register</h2>
+
+
+  <div class="imgcontainer">
+    <img src="../images/login.png" alt="Avatar" class="avatar">
+  </div>
+     <!--------------------------------------------   Info Form  ------------------------------------------->
+<form action="signup2.php" method="POST" id="signup_form">
+  <div class="container">
+      <label for="uname"><b>First Name</b></label>
+      <input type="text" placeholder="Enter First Name" name="fname" required>
+      <label for="uname"><b>Last Name</b></label>
+      <input type="text" placeholder="Enter Last Name" name="lname" required>
+    <label for="uname"><b>Email</b></label>
+    <input type="text" placeholder="Enter Email" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="pass" required>
+
+    <label for="user"><b>User</b></label>
+    <select class="browser-default custom-select" name="select_user" type="select-box" required>
+      <option value="1" selected >Guest</option>
+    </select>
+    </br>
+    </br>
+
+    <button type="submit">Register</button>
+  </div>
+  </form>
+     <!--------------------------------------------   Cancel and Go back  ------------------------------------------->
+
+  <div class="container" id="cancel-create">
+      <div class="row">
+          <div class="col" id="cancel">
+              <a class="download-button btn btn-lg btn-dark" href="index.html" type="link"></i>Cancel</a>
+          </div>
+        <div class="col" id="create">
+            <a class="download-button btn btn-lg btn-dark" href="search_to_login.php" type="link"></i>Go Back</a>
+          </div>
+      </div>
+
+    </div>
+</form>
+
+
+</body>
+</html>

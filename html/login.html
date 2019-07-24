@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel="stylesheet" href="../css/login.css">
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</head>
+<body>
+<h1 style="text-align: center">Star Hotel</h1>
+<h2 style="text-align: center">Login</h2>
+
+               <!------------------------------   Avatar ------------------------------------->
+
+<form action="login.php" method="POST" id="login_form">
+  <div class="imgcontainer">
+    <img src="../images/login.png" alt="Avatar" class="avatar">
+  </div>
+
+  <div class="container">
+    <label for="uname"><b>Username</b></label>
+    <input type="text" placeholder="Enter Username" name="email" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input type="password" placeholder="Enter Password" name="psw" required>
+
+<label for="psw"><b>User</b></label>
+    <select class="browser-default custom-select" name="select_user" type="select-box" required>
+      <option value="1" selected>Guest</option>
+      <option value="2">Staff</option>
+</select>
+    </br>
+    <button type="submit">Login</button>
+  </div>
+
+               <!------------------------------ Cancel ------------------------------------->
+
+  <div class="container" id="cancel-create">
+      <div class="row">
+          <div class="col" id="cancel">
+              <a class="download-button btn btn-lg btn-dark" href="index.html" type="link"></i>Cancel</a>
+          </div>
+        <div class="col" id="create">
+            <a class="download-button btn btn-lg btn-dark" href="signup.html" type="link"></i>Create Account</a>
+          </div>
+      </div>
+
+
+
+</form>
+
+
+</body>
+</html>

@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>About Us</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Montserrat|Ubuntu" rel="stylesheet">
+
+  <!-- CSS Stylesheets -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+  <link rel="stylesheet" href="../css/aboutus.css">
+
+
+  <!-- Font Awesome -->
+  <script defer src="https://use.fontawesome.com/releases/v5.0.7/js/all.js"></script>
+
+  <!-- Bootstrap Scripts -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+  <link href="https://unpkg.com/gijgo@1.9.13/css/gijgo.min.css" rel="stylesheet" type="text/css" />
+  <script src="https://unpkg.com/gijgo@1.9.13/js/gijgo.min.js" type="text/javascript"></script>
+   <link rel="stylesheet" href="http://code.jquery.com/ui/1.10.3/themes/smoothness/jquery-ui.css" />
+    <script src="http://code.jquery.com/jquery-1.9.1.js"></script>
+    <script src="http://code.jquery.com/ui/1.10.3/jquery-ui.js"></script>
+
+<script>
+$(function() {
+            $( "#from" ).datepicker({
+minDate:0,
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 2,
+                onClose: function( selectedDate ) {
+                    $( "#to" ).datepicker( "option", "minDate", selectedDate );
+                }
+            });
+            $( "#to" ).datepicker({
+                defaultDate: "+1w",
+                changeMonth: true,
+                numberOfMonths: 2,
+                onClose: function( selectedDate ) {
+                    $( "#from" ).datepicker( "option", "maxDate", selectedDate );
+                }
+            });
+
+
+        });
+</script>
+</head>
+
+
+<body>
+    <!-------------------------------------------- Title & Toggle Menu -------------------------------------------->
+  <section class="colored-section" id="title">
+    <div class="container-fluid">
+      <!-- Nav Bar -->
+
+      <nav class="navbar navbar-expand-lg navbar-dark">
+
+          <a class="navbar-brand" href="#title">
+            <img src="../images/logo.png" width="180" height="150" class="d-inline-block align-top" alt="logo">
+          </a>
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo02">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link" href="index.html">Home</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Aboutus.html">About Us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="index.html#pricing">Rooms</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="login.html">Login</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Aboutus.html#contact-info">Contact</a>
+            </li><li class="nav-item">
+              <a class="nav-link" href="#features">Book Now</a>
+            </li>
+          </ul>
+
+        </div>
+      </nav>
+
+  </section>
+
+               <!------------------------------Middle Picture------------------------------------->
+
+  <section class="white-section" id="features">
+              <div class="container">
+                  <div class="row" >
+                      <div class="col">
+                          <div class="home_content text-center">
+                              <div class="home_title"><h1>About Us</h1></div>
+                              <div class="home_text">Since 1979, Star Hotel has been the heart of the city</div>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+
+    <div class="container-fluid">
+        <div class="row" style="width:100%;margin-left:0;margin-right:0;">
+
+                <image class="middle-image" src="../images/123.jpg" alt="middle-image"></image>
+        </div>
+
+
+    </div>
+
+  </section>
+
+<form action="result.php" autocomplete="off" method="POST">
+
+
+               <!-----------------------------Search Box------------------------------------->
+
+ <section class="colored-section" id="testimonials">
+      <div class="container_fluid" id="search_box_container">
+          <div class="row">
+
+               <div class="eachbox col-lg-2 col-md-6 col-sm-12">
+
+                     <input id="from" name="from"class="box" type="text" placeholder="Check In" required>
+
+
+
+              </div>
+              <div class="eachbox col-lg-2 col-md-6 col-sm-12">
+
+                          <input id="to" name="to" class="box" type="text" placeholder="Check Out" required>
+
+              </div>
+              <div class="eachbox col-lg-2 col-md-6 col-sm-12">
+
+
+                         <input name="adult"class="box" type="number" placeholder="Adults" min="1" max="20" step="1" required/>
+
+
+
+
+              </div>
+            <div class="eachbox col-lg-2 col-md-6 col-sm-12">
+
+
+                           <input name="kid" class="box" type="number" placeholder="Children" min="0" max="20" step="1" required/>
+
+              </div>
+             <div class="eachbox col-lg-2 col-md-6 col-sm-12">
+
+
+                           <input name="room"class="box" type="number" placeholder="Rooms" min="1" max="20" step="1" required/>
+
+              </div>
+             <div class="eachbox col-lg-2 col-md-6 col-sm-12">
+
+                          <button id="search-btn" class="sbox btn" type="submit">Search</button>
+
+              </div>
+
+
+              </div>
+          </div>
+
+  </section>
+
+</form>
+
+
+               <!------------------------------Room Pricing------------------------------------->
+
+  <section class="white-section" id="pricing">
+     <div class="container-fluid" id="more-detail">
+         <div class="row row-xl-eq-height">
+             <div class="col-xl-6 eh">
+                 <img id="about_us_pic1"class="aboutus_pic" src="../images/about_us_pic1.jpeg" alt="Swimming-pool" />
+             </div>
+
+             <div class="col-xl-6 eh">
+                 <div class="about-text">
+                     </br><h1>Star Hotel </br>More than just a stay</h1></br></br>
+                     <p>
+                    We are located in center of the city and near the riverside. There are amazing facilities in our hotel which will satisfy your needs.</br>
+                </br></br>
+                    All season swimming pools plus indoor and outdoor which allow guests to enjoy their time no matter the weather will be.
+                </br></br>
+
+                     </p>
+
+
+                 </div>
+             </div>
+         </div>
+         <div class="row row-xl-eq-height">
+
+
+             <div class="col-xl-6 eh">
+                 <div class="about-text">
+                 </br><h1>Star Hotel </br>Adventure and Awesomeness</h1></br></br>
+                     <p>
+                    We are pleased to provide the best travel package which guests would love to benefit from.</br>
+                </br></br>
+                    With premium services, the largest cruise on the beautiful sea: dinning, birdseeing and enjoying the sunset.
+                </br></br>
+
+                     </p>
+
+
+                 </div>
+             </div>
+             <div class="col-xl-6 eh">
+                 <img id="about_us_pic1"class="aboutus_pic" src="../images/about_us_pic3.jpeg" alt="Swimming-pool" />
+             </div>
+         </div>
+     </div>
+
+
+               <!------------------------------Contact Info------------------------------------->
+
+    <div class="contact-box" id="contact-info">
+        <div class="about-text">
+            <h1>Contact Info</h1></br>
+            <p>
+                Please send us an email if you have any questions regarding your bookings and your stays.
+            </p>
+        </div>
+        <form action="#" class="contact_form" id="contact_form">
+            <div class="row contact_row">
+                <div class="col-md-6"><input type="text" class="contact_input" placeholder="Name" required="required"></div>
+                <div class="col-md-6"><input type="email" class="contact_input" placeholder="E-mail" required="required"></div>
+            </div>
+            <div><textarea class="contact_input contact_textarea" placeholder="Message" required="required"></textarea></div>
+            <button class="contact_button">send message</button>
+        </form>
+    </div>
+
+
+  </section>
+
+  <section class="colored-section" id="cta">
+
+    <div class="container-fluid">
+
+      <h3 class="big-heading">Find the True Comfort of Your Stay Today.</h3>
+      <a class="download-button btn btn-lg btn-dark" href="login.html" type="link"><i class="fas fa-sign-in-alt"></i> Login </a>
+      <a class="download-button btn btn-lg btn-dark" href="#features" type="link"><i class="fas fa-bed"></i> Book</a>
+    </div>
+  </section>
+
+
+
+
+  <footer class="white-section" id="footer">
+    <div class="container-fluid">
+      <i class="social-icon fab fa-facebook-f"></i>
+      <i class="social-icon fab fa-twitter"></i>
+      <i class="social-icon fab fa-instagram"></i>
+      <i class="social-icon fas fa-envelope"></i>
+    </div>
+  </footer>
+
+
+</body>
+
+</html>
