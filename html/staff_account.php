@@ -281,257 +281,9 @@ chart2.draw(data_room,options_room);
   <div class="imgcontainer d-flex justify-content-center">
     <img src="../images/login.png" alt="Avatar" class="avatar">
   </div>
-<!---- comment out
-  <div id="accordion" >
-    <div class="card">
-      <div class="card-header" style="text-align:center" id="headingOne">
-        <h5 class="mb-0">
-          <button class="btn btn-link" data-toggle="collapse" data-target="#collapseOne" aria-expanded="false" aria-controls="collapseOne">
-            Account Info
-          </button>
-        </h5>
-      </div>
 
-      <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
-        <div class="card-body">
-
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputEmail4">First Name</label>
-        <input type="text" class="form-control" name="outputFname"id="inputEmail4" value="<?php echo $firstname ?>" readonly>
-      </div>
-      <div class="form-group col-md-6">
-        <label for="inputPassword4">Last Name</label>
-        <input type="text" class="form-control" name="outputLname" id="inputPassword4" value="<?php echo $lastname ?>" readonly>
-      </div>
-    </div>
-    <div class="form-group">
-      <label for="inputAddress">Email</label>
-      <input type="email" name="outputEmail"class="form-control" id="inputAddress" value="<?php echo $email ?>" readonly>
-    </div>
-    <div class="form-group">
-      <label for="inputAddress2">Address</label>
-      <input type="text" name="outputAddress"class="form-control" id="inputAddress2" value="<?php echo $address ?>" readonly>
-    </div>
-    <div class="form-row">
-      <div class="form-group col-md-6">
-        <label for="inputCity">City</label>
-        <input type="text" name="outputCity" class="form-control" value="<?php echo $city ?>" id="inputCity" readonly>
-      </div>
-      <div class="form-group col-md-4">
-        <label for="inputState">State</label>
-        <input type="text" name="outputState" class="form-control" value="<?php echo $city ?>" id="inputCity" readonly>
-      </div>
-      <div class="form-group col-md-2">
-        <label for="inputZip">Zip</label>
-        <input type="text" name="outputZip"class="form-control" value="<?php echo $zip ?>" id="inputZip" readonly>
-      </div>
-    </div>
-
-
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" style="text-align:center"  id="headingTwo">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-            Booking Info
-          </button>
-        </h5>
-      </div>
-      <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
-        <div class="card-body">
-<div class="table-responsive-md">
-
-            <table class="table table-grey">
-      <thead>
-        <tr>
-          <th scope="col">#Booking</th>
-          <th scope="col">Check In</th>
-          <th scope="col">Check Out</th>
-          <th scope="col">Guests</th>
-          <th scope="col">Kids</th>
-          <th scope="col">Rooms</th>
-          <th scope="col">Type</th>
-          <th scope="col">Status</th>
-        </tr>
-      </thead>
-      <tbody>
-<?php
-
-$query="select * from booking where email='$email' and status='N/A'";
-$result=$con->query($query);
-if(!$result) die($conn->error);
-$rows= $result->num_rows;
-
-for ( $j=0;$j<$rows ;++$j)
-{
-
-   echo '<tr>';
-    $result->data_seek($j);
-    $row = $result->fetch_array(MYSQLI_ASSOC);
-    echo '<td>'   . $row['bookingID']   . '</td>';
-    echo '<td>'    . $row['checkin']    . '</td>';
-    echo '<td>'    . $row['checkout']    . '</td>';
-    echo '<td>'    . $row['guests']    . '</td>';
-    echo '<td>'    . $row['kid']    . '</td>';
-    echo '<td>'    . $row['room']    . '</td>';
-    echo '<td>'    . $row['type']    . '</td>';
-    echo '<td>'    . $row['status']    . '</td>';
-    echo '</tr>';
-
-}
-
-?>
-
-      </tbody>
-    </table>
-</div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header" style="text-align:center" id="headingThree">
-        <h5 class="mb-0">
-          <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-            Update Info
-          </button>
-        </h5>
-      </div>
-      <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
-        <div class="card-body">
-
-<form action='user_account.php' method="POST" form="updateInfo" name="updateInfo">
-
-
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputEmail4">First Name</label>
-                <input type="text" class="form-control" name="updateFname"id="inputEmail4" placeholder="<?php echo $firstname ?>" required>
-              </div>
-              <div class="form-group col-md-6">
-                <label for="inputPassword4">Last Name</label>
-                <input type="text" class="form-control" name="updateLname" id="inputPassword4" placeholder="<?php echo $lastname ?>" required>
-              </div>
-            </div>
-
-            <div class="form-group">
-              <label for="inputAddress2">Address</label>
-              <input type="text" name="updateAddress"class="form-control" id="inputAddress2" placeholder="<?php echo $address ?>"  required>
-            </div>
-            <div class="form-row">
-              <div class="form-group col-md-6">
-                <label for="inputCity">City</label>
-                <input type="text" name="updateCity" class="form-control"  placeholder="<?php echo $city ?>" required >
-              </div>
-              <div class="form-group col-md-4">
-                <label for="inputState">State</label>
-                <input type="text" name="updateState" class="form-control" placeholder="<?php echo $state ?>" required>
-              </div>
-              <div class="form-group col-md-2">
-                <label for="inputZip">Zip</label>
-                <input type="text" name="updateZip"class="form-control" placeholder="<?php echo $zip ?>" required >
-              </div>
-            </div>
-            <div class="form-group row d-flex justify-content-center">
-                <div class="col-sm-10 d-flex justify-content-center">
-                  <button type="submit" class="btn btn-primary">Update Now</button>
-                </div>
-              </div>
-
-</form>
-
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="card">
-    <div class="card-header"style="text-align:center"  id="headingFour">
-      <h5 class="mb-0">
-        <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-          Cancellation
-        </button>
-      </h5>
-    </div>
-    <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
-      <div class="card-body">
-
-        <form action="user_account.php" method="POST" id="cancel_form" name="cancel_form">
-<p style="text-align:center"> Cancellation is allowed only 24 HOURS before the Check In date.</br> Possible Bookings To Be Canceled:</p>
-<div class="table-responsive-xl">
-
-            <table class="table table-grey">
-      <thead>
-        <tr>
-          <th scope="col">#Booking</th>
-          <th scope="col">Check In</th>
-          <th scope="col">Check Out</th>
-          <th scope="col">Guests</th>
-          <th scope="col">Kids</th>
-          <th scope="col">Rooms</th>
-          <th scope="col">Type</th>
-          <th scope="col">Status</th>
-         <th scope="col">Check</th>
-        </tr>
-      </thead>
-      <tbody>
-<?php
-
-$query="select * from booking where email='$email' and status='N/A'";
-$result=$con->query($query);
-if(!$result) die($conn->error);
-$rows= $result->num_rows;
-$i=0;
-for ( $j=0;$j<$rows ;++$j)
-{
-$result->data_seek($j);
-$row = $result->fetch_array(MYSQLI_ASSOC);
-$thedate=$row['checkin'];
-$current = date("Y-m-d");
-$date=str_replace('/','-',$thedate);
-$newDate = preg_replace("/(\d+)\D+(\d+)\D+(\d+)/","$3-$1-$2",$date);
-$daysdiffernce = date_diff(date_create($current),date_create($newDate));
-$d_is=$daysdiffernce->format("%R%a");
-$hour=15-date('H');
-  if($d_is>1 || (($d_is==1 && $hour>0))){
-$id_t=$row['bookingID'];
-    echo '<tr>';
-    echo '<td>'   . $row['bookingID']   . '</td>';
-    echo '<td>'    . $row['checkin']    . '</td>';
-    echo '<td>'    . $row['checkout']    . '</td>';
-    echo '<td>'    . $row['guests']    . '</td>';
-    echo '<td>'    . $row['kid']    . '</td>';
-    echo '<td>'    . $row['room']    . '</td>';
-    echo '<td>'    . $row['type']    . '</td>';
-    echo '<td>'    . $row['status']    . '</td>';
-echo '<td><input type='."'checkbox'".'name='."'box[]'"."   value='".$id_t ."'></td>";
-    echo '</tr>';
-}
-}
-
-?>
-
-      </tbody>
-    </table>
-</div>
-            <div class="d-flex justify-content-center">
-                  <button type="submit" name="cancel-btn"class="btn btn-primary">DELETE THE BOOKING</button>
-                </div>
-        </div>
-      </div>
-    </div>
-
-
-
-
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
-                                  end of comment out---->
-<!--------------------------------------------staff log in --------------------------------------->
+                           
+<!--staff log in -->
 
 <ul class="nav nav-pills d-flex justify-content-center" id="pills-tab" role="tablist">
   <li class="nav-item">
@@ -553,12 +305,12 @@ echo '<td><input type='."'checkbox'".'name='."'box[]'"."   value='".$id_t ."'></
     <a class="nav-link" id="pills-cancel-tab" data-toggle="pill" href="#pills-cancel" role="tab" aria-controls="pills-cancel" aria-selected="false" >Cancellation</a>
   </li>
 </ul>
-<!------------------------------------------------home---------------------------------------------->
+<!--home-->
 <div class="tab-content" id="pills-tabContent" style="padding-left:20px;padding-right:20px;">
   <div class="tab-pane fade show" id="pills-home" role="tabpanel" aria-labelledby="pills-home-tab">
    <p style="text-align:center;color:#ff8080;"></br></br>Staff Personal Information:
 </p>
-<!-------------nested start ------------>
+<!--nested start -->
         <ul class="nav nav-pills" id="pills-tab" role="tablist">
           <li class="nav-item">
          <a class="nav-link" id="pills-staffacc-tab" data-toggle="pill" href="#pills-staffacc" role="tab" aria-controls="pills-staffacc" aria-selected="false">Account Info</a>
@@ -571,7 +323,7 @@ echo '<td><input type='."'checkbox'".'name='."'box[]'"."   value='".$id_t ."'></
        <div class="tab-content" id="pills-tabContent">
         <div class="tab-pane fade" id="pills-staffacc" role="tabpanel" aria-labelledby="pills-staffacc-tab">
 
-<!------ staff acc-------->
+<!-- staff acc-->
     <div class="form-row">
       <div class="form-group col-md-6">
         <label for="inputEmail4">First Name</label>
@@ -605,7 +357,7 @@ echo '<td><input type='."'checkbox'".'name='."'box[]'"."   value='".$id_t ."'></
       </div>
     </div>
 
-<!------ end of staff acc------->
+<!--end of staff acc-->
 
 
 
@@ -615,7 +367,7 @@ echo '<td><input type='."'checkbox'".'name='."'box[]'"."   value='".$id_t ."'></
 
                </div>
     <div class="tab-pane fade" id="pills-staffchange" role="tabpanel" aria-labelledby="pills-staffchange-tab">
-<!---- staff update -------------->
+<!--staff update -->
       <form action='staff_account.php' method="POST" form="updateInfo" name="updateInfo">
 
 
@@ -660,7 +412,7 @@ echo '<td><input type='."'checkbox'".'name='."'box[]'"."   value='".$id_t ."'></
 
 
 
-<!------ end of staff update------>
+<!--end of staff update-->
 
 
 
@@ -669,10 +421,10 @@ echo '<td><input type='."'checkbox'".'name='."'box[]'"."   value='".$id_t ."'></
     </div>
 
 
-<!---------------nested end------------->
+<!---nested end-->
 
 </div>
-<!-----------------------------------------------booking---------------------------------------------->
+<!--booking-->
   <div class="tab-pane fade" id="pills-booking" role="tabpanel" aria-labelledby="pills-booking-tab">
 <p style="text-align:center"></br></br>All Booking List:</p>
        <div class="table-responsive-md">
@@ -726,7 +478,7 @@ for ( $j=0;$j<$rows ;++$j)
 </div>
 
 
-<!------------------------------------------------checkin---------------------------------------------->
+<!--checkin-->
   <div class="tab-pane fade" id="pills-checkin" role="tabpanel" aria-labelledby="pills-checkin-tab">
   <p style="text-align:center"></br></br>Today's Check In List:</p>
 
@@ -787,7 +539,7 @@ $id_t=$row['bookingID'];
 
       </tbody>
     </table>
-<!----------------- add room into booking id ------------------>
+<!--dd room into booking id --->
 
       <div class="container" id="select-id">
       <form action="add_room.php" method="POST">
@@ -821,11 +573,11 @@ $id_t=$row['bookingID'];
 </div>
 </div>
 </form>
-<!-----------------end of add room into booking id ------------------>
+<!--end of add room into booking id-->
 
 
 
-<!------------------------------------------------checkout-form ---------------------------------------------->
+<!--checkout-form --->
 
   <div class="tab-pane fade" id="pills-checkout" role="tabpanel" aria-labelledby="pills-checkout-tab">
   <p style="text-align:center"></br></br>Today's Checkout List:</p>
@@ -881,7 +633,7 @@ echo '<td><input type='."'checkbox'".'name='."'boxcheckout[]'"."   value='".$roo
 
 </div>
 </form>
-<!------------------------------------------------change---------------------------------------------->
+<!--change-->
   <div class="tab-pane fade" id="pills-change" role="tabpanel" aria-labelledby="pills-change-tab">
     <p style="text-align:center"></br></br>The results of the database:</p>
  <div id="piechart"></div>
@@ -889,7 +641,7 @@ echo '<td><input type='."'checkbox'".'name='."'boxcheckout[]'"."   value='".$roo
 <div id="piechart_room"></div>
 
  </div>
-<!------------------------------------------------cancel---------------------------------------------->
+<!--cancel-->
 <div class="tab-pane fade" id="pills-cancel" role="tabpanel" aria-labelledby="pills-cancel-tab">
 
 <p style="text-align:center"></br>Cancellation is allowed only 24 HOURS before the Check In date.</br> Possible Bookings To Be Canceled:</p>
